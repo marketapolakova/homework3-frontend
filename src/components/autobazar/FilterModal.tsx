@@ -187,7 +187,7 @@ const FilterModal = ({ show, setShow, filterCars, reset }: Props) => {
           Reset
         </Button>
         <Button
-          variant="secondary"
+          variant="secondary-outline"
           onClick={() => {
             setShow(!show);
           }}

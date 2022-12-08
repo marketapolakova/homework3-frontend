@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Table } from "react-bootstrap";
+import { Button, Table, Container } from "react-bootstrap";
 import { autobazar, AutobazarType } from "../data/autobazar";
 import FilterModal, { filterData } from "../components/autobazar/FilterModal";
 
@@ -37,8 +37,9 @@ const Autobazar = (props: Props) => {
     setCars(filteredCars);
   };
   return (
-    <div>
+    <Container>
       <Button
+        className="my-3"
         onClick={() => {
           setShow(!show);
         }}
@@ -75,7 +76,7 @@ const Autobazar = (props: Props) => {
           })}
         </tbody>
       </Table>
-    </div>
+    </Container>
   );
 };
 
