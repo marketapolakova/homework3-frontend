@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
+import Autobazar from "./pages/Autobazar";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,6 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/autobazar" element={<Autobazar />} />
         </Route>
       </Routes>
     </BrowserRouter>

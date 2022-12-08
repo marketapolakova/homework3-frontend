@@ -13,6 +13,7 @@ function App() {
           <Navbar.Brand href="/">Navbar</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+            <Nav.Link href="/autobazar">Autobazar</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
