@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Button, Modal, Form, FloatingLabel, Row, Col } from "react-bootstrap";
 import _ from "lodash";
 import { autobazar } from "../../data/autobazar";
+import { ColorSchemaContext } from "../../context/ColorSchemaContext";
 
 type Props = {
   show: boolean;
@@ -30,8 +31,6 @@ const FilterModal = ({ show, setShow, filterCars, reset }: Props) => {
   });
 
   const handleChange = (e: any) => {
-    console.log(filter);
-
     setFilter({ ...filter, [e.target.name]: e.target.value });
   };
   const brands = {

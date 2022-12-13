@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Autobazar from "./pages/Autobazar";
+import ColorSchemaProvider from "./context/ColorSchemaContext";
+import ColorSchemaChanger from "./components/ColorSchemaChanger/ColorSchemaChanger";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,12 +15,18 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/autobazar" element={<Autobazar />} />
-        </Route>
-      </Routes>
+      <ColorSchemaProvider>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/autobazar" element={<Autobazar />} />
+            <Route
+              path="/colorSchemaChanger"
+              element={<ColorSchemaChanger />}
+            />
+          </Route>
+        </Routes>
+      </ColorSchemaProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
